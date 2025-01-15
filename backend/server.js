@@ -9,7 +9,7 @@ env.config()
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://Projects:Parteek414@projects.equs3.mongodb.net/stock?retryWrites=true&w=majority&appName=Projects");
+mongoose.connect(process.env.URI);
 
 const stockSchema = new mongoose.Schema({
 	company: String,
